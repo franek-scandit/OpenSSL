@@ -22,6 +22,8 @@ let package = Package(
         .target(
             name: "OpenSSL",
             dependencies: [],
-            linkerSettings: [.linkedFramework("OpenSSL")])
+            linkerSettings: [.linkedFramework("OpenSSL")],
+            swiftSettings: [.unsafeFlags(["-FFrameworks/iOS"])]
+            )
     ]
 )
